@@ -16,10 +16,10 @@ from torchvision import transforms
 import torchvision.transforms.functional as TF
 import random
 
-dataset = "4373"
+dataset = "DATASET NAME"
 img_size = 512
 dataset = str(dataset)
-experiment = "_UNet_10x_RandomCrops_KeepProb_0.1_" + dataset + "_"
+experiment = "EXPERIMENT NAME"
 random_crops = True
 semi_supervised = True
 save_predictions = False
