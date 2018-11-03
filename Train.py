@@ -1,12 +1,6 @@
-local = True
 
 import sys
 import os
-if local:
-    sys.path.append(r"D:\Image_Processing")
-else:
-    path_to_stoltz = '/home/exacloud/lustre1/gray_lab/users/stoltz'
-    sys.path.append(os.path.join(path_to_stoltz, 'Utils'))
 import numpy as np
 import pandas as pd
 from PIL import Image
@@ -45,21 +39,13 @@ keep_prob = 0.1
 
 def main():
     # name the experiment and set file paths
-    if local:
-        project_folder = r"D:\Deep Learning\2D Segmentation"
-        saved_models = project_folder + "\\Models\\trained_models\\_" + experiment + ".pth.tar"
-        path_to_data = project_folder + '\\All\\full_' + dataset + "\\"
-        path_to_predictions = project_folder + "\\Test\\full\\Predictions\\" + experiment + "\\"
-        path_to_training_logs = project_folder + "\\Models\\logs\\" + "_" + experiment + "_training" + ".csv"
-        path_to_metrics_logs = project_folder + "\\Models\\logs\\" + "_" + experiment + "_metrics" + ".csv"
-    else:
-        project_folder = "/home/exacloud/lustre1/gray_lab/users/stoltz/Projects/2Dseg/Nucleoli/"
-        saved_models = project_folder + "Models/trained_models/_" + experiment + ".pth.tar"
-        path_to_data = project_folder + 'Data/All/' + str(img_size) + "x" + str(img_size) + '_' + dataset + '_only/'
-        path_to_predictions = project_folder + "Data/Test/" + str(img_size) + "x" + str(img_size) + "/Predictions/" + \
-            experiment + "/"
-        path_to_training_logs = project_folder + "Models/logs/" + "_" + experiment + "_training" + ".csv"
-        path_to_metrics_logs = project_folder + "Models/logs/" + "_" + experiment + "_metrics" + ".csv"
+    project_folder = PATH
+    saved_models = project_folder + PATH
+    path_to_data = project_folder + PATH
+    path_to_predictions = project_folder + PATH
+    path_to_training_logs = project_folder + PATH
+    path_to_metrics_logs = project_folder + PATH
+   
 
 # Start Experiments ====================================================================================================
 # ======================================================================================================================
