@@ -65,9 +65,9 @@ def Metrics(gt_dir_path, pred_dir_path, no_classes, thresh):
         n11 = float(np.sum(np.logical_and(pred == 1, gt == 1)*1))
         # number of false positives 
         n01 = float(np.sum(np.logical_and(pred == 1, gt == 0)*1))
+         # number of false negatives
         n10 = float(np.sum(np.logical_and(pred == 0, gt == 1)*1))
-        # number of false negatives 
-
+        
         # accuracy calculation 
         acc = float((n00 + n11)/(t0 + t1))
         accuracy.append(acc)
